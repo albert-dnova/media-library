@@ -5,11 +5,12 @@ import android.os.Bundle;
 
 import com.lasalle.second.part.medialibrary.R;
 
-public class AddItem extends AppCompatActivity {
+public class AddItem extends AbstractActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_item);
+        super.onCreate(savedInstanceState, R.layout.activity_add_item);
+
+        enableToolbarHomeButton();
     }
 }

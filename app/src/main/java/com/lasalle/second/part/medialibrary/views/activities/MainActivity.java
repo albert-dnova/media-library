@@ -8,18 +8,20 @@ import android.widget.Button;
 
 import com.lasalle.second.part.medialibrary.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AbstractActivity implements View.OnClickListener {
 
     private Button addButton;
     private Button listbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState, R.layout.activity_main);
 
         addButton = (Button) findViewById(R.id.activity_main_add_button);
         listbutton = (Button) findViewById(R.id.activity_main_list_button);
+
+        addButton.setOnClickListener(this);
+        listbutton.setOnClickListener(this);
     }
 
     @Override
