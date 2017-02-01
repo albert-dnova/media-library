@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lasalle.second.part.medialibrary.views.activities.MainActivity">
+    tools:context="com.lasalle.second.part.medialibrary.view.activity.MainActivity">
 
     <include layout="@layout/common_toolbar" />
 
@@ -16,13 +16,13 @@
         android:gravity="center">
 
         <Button
-            android:text="Button"
+            android:text="@string/main_activity_add_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/activity_main_add_button" />
 
         <Button
-            android:text="Button"
+            android:text="@string/main_activity_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/activity_main_list_button" />

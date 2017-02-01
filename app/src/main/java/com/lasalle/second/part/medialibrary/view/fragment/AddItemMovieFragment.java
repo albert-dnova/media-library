@@ -1,0 +1,34 @@
+package com.lasalle.second.part.medialibrary.view.fragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.lasalle.second.part.medialibrary.R;
+
+public class AddItemMovieFragment extends Fragment {
+
+    public AddItemMovieFragment() {
+        // Required empty public constructor
+    }
+
+    public static AddItemMovieFragment newInstance() {
+        AddItemMovieFragment fragment = new AddItemMovieFragment();
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_add_item_movie, container, false);
+    }
+
+}

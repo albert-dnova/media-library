@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MediaLibrary</string>
+    <string name="main_activity_add_items">Add items</string>
+    <string name="main_activity_list">List items</string>
+
+    <string name="add_item_activity_tv_show">TV Show</string>
+    <string name="add_item_activity_movies">Movie</string>
+
+    <string name="fragment_add_item_show_name">Show name:</string>
+    <string name="fragment_add_item_show_num_episodes">Number of episodes:</string>
+    <string name="fragment_add_item_show_starting_year">Starting year:</string>
+
+    <string name="fragment_add_item_movie_name">Movie name:</string>
+    <string name="fragment_add_item_movie_release_year">Release year:</string>
+    <string name="fragment_add_item_movie_director">Director:</string>
+
 </resources>

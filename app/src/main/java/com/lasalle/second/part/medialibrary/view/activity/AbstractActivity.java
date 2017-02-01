@@ -1,4 +1,4 @@
-package com.lasalle.second.part.medialibrary.views.activities;
+package com.lasalle.second.part.medialibrary.view.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
