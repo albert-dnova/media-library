@@ -62,6 +62,19 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_add_item_movie_button"
+                android:text="Send" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </FrameLayout>

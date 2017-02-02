@@ -40,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/fragment_add_item_show_input_num_episodes" />
+                android:id="@+id/fragment_add_item_show_input_num_seasons" />
 
         </LinearLayout>
 
@@ -59,6 +59,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/fragment_add_item_show_input_starting_year" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_add_item_show_button"
+                android:text="Send" />
 
         </LinearLayout>
 
