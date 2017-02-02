@@ -32,7 +32,8 @@ public class MainActivity extends AbstractActivity implements View.OnClickListen
         }
         else if(view.getId() == listbutton.getId())
         {
-
+            Intent intent = new Intent(this, ListActivity.class);
+            startActivity(intent);
         }
     }
 }

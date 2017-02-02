@@ -4,7 +4,7 @@
     <string name="main_activity_list">List items</string>
 
     <string name="add_item_activity_tv_show">TV Show</string>
-    <string name="add_item_activity_movies">Movie</string>
+    <string name="add_item_activity_movies">Movies</string>
 
     <string name="fragment_add_item_show_name">Show name:</string>
     <string name="fragment_add_item_show_num_episodes">Number of episodes:</string>
