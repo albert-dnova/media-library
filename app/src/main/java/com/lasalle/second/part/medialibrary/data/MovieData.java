@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by albert.denova on 02/02/17.
  */
-public interface LibraryData {
+public interface MovieData {
     void addItem(Movie movie);
 
     void addItem(TvShow tvShow);

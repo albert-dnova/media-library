@@ -2,7 +2,7 @@ package com.lasalle.second.part.medialibrary;
 
 import android.app.Application;
 
-import com.lasalle.second.part.medialibrary.data.impl.LibraryDataMock;
+import com.lasalle.second.part.medialibrary.data.impl.MovieDataMock;
 import com.lasalle.second.part.medialibrary.manager.LibraryManager;
 
 public class MediaLibraryApplication extends Application {
@@ -13,7 +13,7 @@ public class MediaLibraryApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        libraryManager = new LibraryManager(new LibraryDataMock());
+        libraryManager = new LibraryManager(new MovieDataMock());
     }
 
     public LibraryManager getLibraryManager() {

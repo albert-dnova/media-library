@@ -1,18 +1,18 @@
 package com.lasalle.second.part.medialibrary.data.impl;
 
-import com.lasalle.second.part.medialibrary.data.LibraryData;
+import com.lasalle.second.part.medialibrary.data.MovieData;
 import com.lasalle.second.part.medialibrary.model.Movie;
 import com.lasalle.second.part.medialibrary.model.TvShow;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class LibraryDataMock implements LibraryData {
+public class MovieDataMock implements MovieData {
 
     private List<Movie> movieList;
     private List<TvShow> showList;
 
-    public LibraryDataMock() {
+    public MovieDataMock() {
         movieList = new ArrayList<>();
         showList = new ArrayList<>();
 
