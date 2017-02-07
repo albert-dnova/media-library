@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database>
+    <name>Library</name>
+    <version>1</version>
+    <tables>
+        <table>
+            <create>
+                CREATE TABLE movies (
+                    _id	INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    director	TEXT NOT NULL,
+                    releaseYear	INTEGER DEFAULT 0
+                );
+            </create>
+            <remove>
+                DROP TABLE IF EXISTS movies;
+            </remove>
+        </table>
+        <table>
+            <create>
+                CREATE TABLE tvshows (
+                _id	INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                numberOfSeasons	NTEGER DEFAULT 0,
+                startingYear	INTEGER DEFAULT 0
+                );
+            </create>
+            <remove>
+                DROP TABLE IF EXISTS tvshows;
+            </remove>
+        </table>
+    </tables>
+
+</database>
