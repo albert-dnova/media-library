@@ -35,7 +35,7 @@ public class MovieDataMock implements MovieData {
         return movieList;
     }
 
-    
+
     public List<TvShow> getShowList() {
         return showList;
     }
