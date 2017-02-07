@@ -11,9 +11,6 @@ import java.util.List;
 public interface MovieData {
     void addItem(Movie movie);
 
-    void addItem(TvShow tvShow);
-
     List<Movie> getMovieList();
 
-    List<TvShow> getShowList();
 }

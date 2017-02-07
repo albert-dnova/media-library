@@ -22,7 +22,7 @@ public class LibraryManager {
 
     public void addTvShow(String name, Integer numberOfSeasons, Integer startingYear) {
         TvShow tvShow = new TvShow(name, numberOfSeasons, startingYear);
-        movieData.addItem(tvShow);
+        //movieData.addItem(tvShow);
     }
 
     public List<Movie> getMovieList() {
@@ -30,7 +30,8 @@ public class LibraryManager {
     }
 
     public List<TvShow> getShowList() {
-        return movieData.getShowList();
+        return null;
+        //return movieData.getShowList();
     }
 
 }
