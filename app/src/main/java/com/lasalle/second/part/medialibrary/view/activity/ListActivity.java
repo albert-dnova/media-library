@@ -43,8 +43,6 @@ public class ListActivity extends AbstractActivity implements BottomNavigationVi
     private void setFragmentContent(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.activity_list_fragment_container, fragment);
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        ft.addToBackStack(null);
         ft.commit();
     }
 
