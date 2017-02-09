@@ -9,8 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.lasalle.second.part.medialibrary.R;
-import com.lasalle.second.part.medialibrary.view.fragment.AddItemMovieFragment;
-import com.lasalle.second.part.medialibrary.view.fragment.AddItemShowFragment;
+import com.lasalle.second.part.medialibrary.view.fragment.ListItemFragment;
 
 public class ListActivity extends AbstractActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -22,7 +21,7 @@ public class ListActivity extends AbstractActivity implements BottomNavigationVi
                 (BottomNavigationView) findViewById(R.id.activity_list_bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
-        View view = bottomNavigationView.findViewById(R.id.activity_list_menu_tvshows);
+        View view = bottomNavigationView.findViewById(R.id.activity_list_menu_movies);
         view.performClick();
     }
 
@@ -30,11 +29,11 @@ public class ListActivity extends AbstractActivity implements BottomNavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.activity_list_menu_movies)
         {
-            setFragmentContent(AddItemMovieFragment.newInstance());
+            setFragmentContent(ListItemFragment.newInstance(ListItemFragment.ItemType.MOVIES));
         }
         else if(item.getItemId() == R.id.activity_list_menu_tvshows)
         {
-            setFragmentContent(AddItemShowFragment.newInstance());
+            setFragmentContent(ListItemFragment.newInstance(ListItemFragment.ItemType.TV_SHOWS));
         }
 
         return true;

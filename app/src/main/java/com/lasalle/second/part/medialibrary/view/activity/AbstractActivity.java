@@ -25,7 +25,7 @@ public class AbstractActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    protected LibraryManager getLibraryManager() {
+    public LibraryManager getLibraryManager() {
         return ((MediaLibraryApplication) getApplication()).getLibraryManager();
     }
 }
