@@ -20,4 +20,6 @@
         android:layout_weight="1"
         android:id="@+id/activity_add_item_view_pager" />
 
+    <include layout="@layout/common_waiting" />
+
 </LinearLayout>

@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import com.lasalle.second.part.medialibrary.MediaLibraryApplication;
 import com.lasalle.second.part.medialibrary.R;
+import com.lasalle.second.part.medialibrary.view.activity.AbstractActivity;
 
 public class AddItemMovieFragment extends Fragment implements View.OnClickListener {
 
@@ -57,12 +58,17 @@ public class AddItemMovieFragment extends Fragment implements View.OnClickListen
     public void onClick(View view) {
         if(view.getId() == button.getId())
         {
+            AbstractActivity activity = (AbstractActivity) getActivity();
+            activity.displayWaiting();
+
             String movieName = movieNameInput.getText().toString();
             String directorName = directorNameInput.getText().toString();
             Integer releaseYear = Integer.parseInt(releaseYearInput.getText().toString());
 
             MediaLibraryApplication application = (MediaLibraryApplication) getActivity().getApplication();
             application.getLibraryManager().addMovie(movieName, directorName, releaseYear);
+
+            activity.hideWaiting();
 
             getActivity().finish();
         }
