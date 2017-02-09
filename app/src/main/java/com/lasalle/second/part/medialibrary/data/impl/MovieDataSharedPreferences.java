@@ -8,8 +8,6 @@ import com.google.gson.reflect.TypeToken;
 import com.lasalle.second.part.medialibrary.data.MovieData;
 import com.lasalle.second.part.medialibrary.model.Movie;
 
-import org.json.JSONObject;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;

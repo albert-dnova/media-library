@@ -9,7 +9,7 @@
                     _id	INTEGER PRIMARY KEY AUTOINCREMENT,
                     name TEXT NOT NULL,
                     director	TEXT NOT NULL,
-                    releaseYear	INTEGER DEFAULT 0
+                    releaseYear	INTEGER DEFAULT
                 );
             </create>
             <remove>
@@ -19,10 +19,10 @@
         <table>
             <create>
                 CREATE TABLE tvshows (
-                _id	INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                numberOfSeasons	NTEGER DEFAULT 0,
-                startingYear	INTEGER DEFAULT 0
+                    _id	INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    numberOfSeasons	NTEGER DEFAULT 0,
+                    startingYear	INTEGER DEFAULT 0
                 );
             </create>
             <remove>
