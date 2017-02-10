@@ -23,18 +23,20 @@ public class MovieDataSharedPreferences implements MovieData {
 
     public MovieDataSharedPreferences(Context context) {
         this.context = context;
-        movieList = new ArrayList<>();
-        readFromSharedPreferences();
     }
 
     @Override
     public void addItem(Movie movie) {
+        if(movieList == null) {
+            readFromSharedPreferences();
+        }
         movieList.add(movie);
         writeToSharedPreferences();
     }
 
     @Override
     public List<Movie> getMovieList() {
+        readFromSharedPreferences();
         return movieList;
     }
 
@@ -53,6 +55,11 @@ public class MovieDataSharedPreferences implements MovieData {
     }
 
     private void readFromSharedPreferences() {
+        try {
+            Thread.sleep(30000L);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         SharedPreferences sharedPreferences =
                 context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
         String content = sharedPreferences.getString(ITEMS_KEY_NAME, "");

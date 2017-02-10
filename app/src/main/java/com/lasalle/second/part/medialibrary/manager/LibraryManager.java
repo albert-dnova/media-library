@@ -9,6 +9,7 @@ import java.util.List;
 public class LibraryManager {
 
     private MovieData movieData;
+    private List<Movie> movieList;
 
     public LibraryManager(MovieData movieData)
     {
@@ -18,6 +19,12 @@ public class LibraryManager {
     public void addMovie(String name, String director, Integer releaseYear) {
         Movie movie = new Movie(name, director, releaseYear);
         movieData.addItem(movie);
+
+        if(movieList == null)
+        {
+            movieList = movieData.getMovieList();
+        }
+        movieList.add(movie);
     }
 
     public void addTvShow(String name, Integer numberOfSeasons, Integer startingYear) {
@@ -26,7 +33,12 @@ public class LibraryManager {
     }
 
     public List<Movie> getMovieList() {
-        return movieData.getMovieList();
+        if(movieList == null)
+        {
+            movieList = movieData.getMovieList();
+        }
+
+        return movieList;
     }
 
     public List<TvShow> getShowList() {

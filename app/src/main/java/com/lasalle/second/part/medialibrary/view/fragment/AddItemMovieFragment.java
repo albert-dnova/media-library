@@ -1,5 +1,6 @@
 package com.lasalle.second.part.medialibrary.view.fragment;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
@@ -12,7 +13,11 @@ import android.widget.EditText;
 
 import com.lasalle.second.part.medialibrary.MediaLibraryApplication;
 import com.lasalle.second.part.medialibrary.R;
+import com.lasalle.second.part.medialibrary.manager.LibraryManager;
+import com.lasalle.second.part.medialibrary.model.Movie;
 import com.lasalle.second.part.medialibrary.view.activity.AbstractActivity;
+
+import java.util.List;
 
 public class AddItemMovieFragment extends Fragment implements View.OnClickListener {
 
@@ -58,19 +63,48 @@ public class AddItemMovieFragment extends Fragment implements View.OnClickListen
     public void onClick(View view) {
         if(view.getId() == button.getId())
         {
+            AddItemMovie addItemMovie = new AddItemMovie();
+            addItemMovie.execute();
+        }
+    }
+
+    private class AddItemMovie extends AsyncTask<Void, Void, Void> {
+
+        private String movieName;
+        private String directorName;
+        private Integer releaseYear;
+        private LibraryManager libraryManager;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
             AbstractActivity activity = (AbstractActivity) getActivity();
             activity.displayWaiting();
 
-            String movieName = movieNameInput.getText().toString();
-            String directorName = directorNameInput.getText().toString();
-            Integer releaseYear = Integer.parseInt(releaseYearInput.getText().toString());
+            movieName = movieNameInput.getText().toString();
+            directorName = directorNameInput.getText().toString();
+            releaseYear = Integer.parseInt(releaseYearInput.getText().toString());
 
             MediaLibraryApplication application = (MediaLibraryApplication) getActivity().getApplication();
-            application.getLibraryManager().addMovie(movieName, directorName, releaseYear);
+            libraryManager = application.getLibraryManager();
+        }
 
+        @Override
+        protected Void doInBackground(Void... voids) {
+            libraryManager.addMovie(movieName, directorName, releaseYear);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void movieList) {
+            super.onPostExecute(movieList);
+
+            AbstractActivity activity = (AbstractActivity) getActivity();
             activity.hideWaiting();
-
-            getActivity().finish();
+            activity.finish();
         }
     }
+
+
 }
