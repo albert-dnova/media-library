@@ -1,0 +1,92 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# mdpa-library
+
+Simple API to add and list tv shows and movies
+
+## Shows [/shows]
+
+### List TV Shows [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Game of thrones",
+                "seasons": "7",
+                "startingYear": "2011"
+            },
+            {
+                "name": "How I met your mother",
+                "seasons": "9",
+                "startingYear": "2007"
+            },
+            {
+                "name": "House",
+                "seasons": "8",
+                "startingYear": "2004"
+            }
+        ]
+
+### Add TV show [POST]
+
+You may add your own show using this action. It takes a JSON
+object containing show data.
+
++ Request (application/json)
+
+        {
+            {
+                "name": "",
+                "seasons": "",
+                "startingYear": ""
+            }
+        }
+
++ Response 200 (application/json)
+
+        {"jsonrpc": "2.0", "result": 0, "id": 1}
+        
+## Movies [/movies]
+
+### List Movies [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "BlaBlaBla",
+                "director": "Ian",
+                "releaseYear": "2007"
+            },
+            {
+                "name": "Matrix",
+                "director": "XXX",
+                "releaseYear": "1999"
+            },
+            {
+                "name": "BlaBlaBla2",
+                "director": "Pol",
+                "releaseYear": "2017"
+            }
+        ]
+
+### Add Movie [POST]
+
+You may add your own movie using this action. It takes a JSON
+object containing show data.
+
++ Request (application/json)
+
+        {
+            {
+                "name": "",
+                "director": "",
+                "releaseYear": ""
+            }
+        }
+
++ Response 200 (application/json)
+
+        {"jsonrpc": "2.0", "result": 0, "id": 1}
