@@ -7,6 +7,7 @@ import com.lasalle.second.part.medialibrary.data.impl.MovieDataFile;
 import com.lasalle.second.part.medialibrary.data.impl.MovieDataMock;
 import com.lasalle.second.part.medialibrary.data.impl.MovieDataSharedPreferences;
 import com.lasalle.second.part.medialibrary.manager.LibraryManager;
+import com.lasalle.second.part.medialibrary.network.impl.LibraryNetworkImpl;
 
 public class MediaLibraryApplication extends Application {
 
@@ -31,7 +32,9 @@ public class MediaLibraryApplication extends Application {
 
         super.onCreate();
 
-        libraryManager = new LibraryManager(new MovieDataSharedPreferences(this));
+        libraryManager = new LibraryManager(
+                new MovieDataSharedPreferences(this),
+                new LibraryNetworkImpl(this));
     }
 
     public LibraryManager getLibraryManager() {
